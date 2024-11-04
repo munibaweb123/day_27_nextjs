@@ -35,7 +35,7 @@ export default function URLShortener() {
       );
 
       setShortUrl(response.data.link); // Set the shortened URL state with the response data
-    } catch (err) {
+    } catch (error) {
       setError("Failed to shorten the URL. Please try again."); // Set error state if the request fails
     }
   };
