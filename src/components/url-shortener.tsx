@@ -12,7 +12,8 @@ const BITLY_ACCESS_TOKEN = process.env.NEXT_PUBLIC_BITLY_ACCESS_TOKEN;
 export default function URLShortener() {
   const [longUrl, setLongUrl] = useState<string>(""); // State to manage the long URL input
   const [shortUrl, setShortUrl] = useState<string>(""); // State to manage the shortened URL
-  const [error, setError] = useState<string>(""); // State to manage error messages
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const [error, setError] = useState<string | null>(null);
 
   // Function to handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
